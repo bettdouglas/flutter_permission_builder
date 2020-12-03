@@ -2,14 +2,25 @@ import 'package:flutter/foundation.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:permissive_builder/src/permission_states.dart';
 
+///Handles state of the permissions
 class PermissionProvider<T> with ChangeNotifier {
 
+  /// The permission you need to request
+  /// ``` 
+  ///   PermissionBuilder(
+  ///          permission: Permission.location,
+  ///      ```
   final Permission permission;
 
   PermissionState<T> _permissionState = PermissionState.initial();
 
+  /// Exposes the current state of the permission  
   PermissionState<T> get state => _permissionState;
 
+
+  /// Used internally to manage state of the permission.
+  /// if lazy is false, it automatically requests permission when created
+  /// otherwise waits for request to be made
   PermissionProvider(this.permission,bool lazy) {
     if(!lazy) {
       _init();
@@ -32,8 +43,10 @@ class PermissionProvider<T> with ChangeNotifier {
     notifyListeners();
   }
 
+  /// Function to requst for permission
   Function get request => _init;
 
+  /// Function that opens app settings 
   Future get openSettings => openAppSettings();
 
 }
