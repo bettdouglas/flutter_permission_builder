@@ -13,7 +13,7 @@ class LocationPermissionWidget extends StatelessWidget {
         return PermissionBuilder(
             permission: Permission.location, // can be any permission in Permission.
             
-            // We didn't ask for permission yet.
+            // We haven't ask for permission yet.
             initialBuilder: (_, askPermissionFn) => FirstTimePermissionWidget(),
 
             // Permission requested. Awaiting for user input. Will rebuild after user input
