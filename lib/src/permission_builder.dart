@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:permissive_builder/src/permission_provider.dart';
-import 'package:permissive_builder/src/permission_states.dart';
+import 'package:permission_builder/src/permission_states.dart';
+import 'package:permission_builder/src/permission_provider.dart';
 import 'package:provider/provider.dart';
 
 ///

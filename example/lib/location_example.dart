@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:permissive_builder/permissive_builder.dart';
+import 'package:permission_builder/permission_builder.dart';
 
 class LocationPermissionPage extends StatelessWidget {
   @override
