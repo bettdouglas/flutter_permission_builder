@@ -1,8 +1,7 @@
 name: permissive_builder
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/bettdouglas/flutter_permission_builder
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -11,16 +10,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  freezed_annotation:
+  freezed_annotation: ^0.12.0
   permission_handler: ^5.0.1+1
-  provider: 
+  provider: ^4.3.2+2
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  freezed: 
-  build_runner:
+  freezed: ^0.12.3
+  build_runner: ^1.10.7
   # effective_dart: ^1.2.1
 
 # For information on the generic Dart part of this file, see the
