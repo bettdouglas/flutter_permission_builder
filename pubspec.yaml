@@ -1,6 +1,6 @@
 name: permission_builder
-description: A new Flutter package project.
-version: 0.0.1
+description: A package thats a wraps around [permission_handler](https://pub.dev/packages/permission_handler) to help you handle your permissions more elegantly.
+version: 0.0.2
 homepage: https://github.com/bettdouglas/flutter_permission_builder
 
 environment:

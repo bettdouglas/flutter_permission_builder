@@ -6,17 +6,20 @@ class LocationPermissionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return PermissionBuilder(
       permission: Permission.location,
-      initialBuilder: (_, askPermissionFn) => FirstTimePermissionWidget(),
+      lazy: true,
+      initialBuilder: (_, askPermissionFn) => FirstTimePermissionWidget(
+        requestPermissionFn: askPermissionFn,
+      ),
       requestingBuilder: (_) => RequestingPermissionWidget(),
-      grantedBuilder: (_) => PermissionGrantedWidget(),
-      restrictedBuilder: (_, askPermissionFn) => PermissionRestrictedWidget(),
-      permanentlyDeniedBuilder: (_, askPermissionFn, openSettingsFn) =>
-          PermanentlyDeniedWidget(
+      grantedBuilder: (_) => GrantedPermissionWidget(),
+      restrictedBuilder: (_, askPermissionFn) => RestrictedPermissionWidget(
+        requestPermissionFn: askPermissionFn,
+      ),
+      permanentlyDeniedBuilder: (_, askPermissionFn, openSettingsFn) => PermanentlyDeniedWidget(
         requestPermissionFn: askPermissionFn,
         openSettingsFn: openSettingsFn,
       ),
-      deniedBuilder: (_, askPermissionFn, openSettingsFn) =>
-          PermissionDeniedWidget(
+      deniedBuilder: (_, askPermissionFn, openSettingsFn) => DeniedPermissionWidget(
         openSettingsFn: openSettingsFn,
         requestPermissionFn: askPermissionFn,
       ),
@@ -24,11 +27,11 @@ class LocationPermissionPage extends StatelessWidget {
   }
 }
 
-class PermissionDeniedWidget extends StatelessWidget {
-  const PermissionDeniedWidget({
+class DeniedPermissionWidget extends StatelessWidget {
+  const DeniedPermissionWidget({
     Key key,
-    this.requestPermissionFn,
-    this.openSettingsFn,
+    @required this.requestPermissionFn,
+    @required this.openSettingsFn,
   }) : super(key: key);
 
   final Function requestPermissionFn;
@@ -82,8 +85,8 @@ class PermanentlyDeniedWidget extends StatelessWidget {
   }
 }
 
-class PermissionRestrictedWidget extends StatelessWidget {
-  const PermissionRestrictedWidget({
+class RestrictedPermissionWidget extends StatelessWidget {
+  const RestrictedPermissionWidget({
     Key key,
     this.requestPermissionFn,
   }) : super(key: key);
@@ -104,8 +107,8 @@ class PermissionRestrictedWidget extends StatelessWidget {
   }
 }
 
-class PermissionGrantedWidget extends StatelessWidget {
-  const PermissionGrantedWidget({
+class GrantedPermissionWidget extends StatelessWidget {
+  const GrantedPermissionWidget({
     Key key,
   }) : super(key: key);
 
@@ -139,7 +142,7 @@ class RequestingPermissionWidget extends StatelessWidget {
 class FirstTimePermissionWidget extends StatelessWidget {
   const FirstTimePermissionWidget({
     Key key,
-    this.requestPermissionFn,
+    @required this.requestPermissionFn,
   }) : super(key: key);
 
   final Function requestPermissionFn;

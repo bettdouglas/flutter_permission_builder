@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:permission_builder/src/permission_states.dart';
-import 'package:permission_builder/src/permission_states.dart';
 
 ///Handles state of the permissions
 class PermissionProvider<T> with ChangeNotifier {
