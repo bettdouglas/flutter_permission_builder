@@ -7,34 +7,42 @@ class LocationPermissionPage extends StatelessWidget {
     return PermissionBuilder(
       permission: Permission.location,
       lazy: true,
-      initialBuilder: (_, askPermissionFn) => FirstTimePermissionWidget(
-        requestPermissionFn: askPermissionFn,
+      initialBuilder: (askPermissionFn) => _FirstTimePermissionWidget(
+        requestPermissionFn: () async => await askPermissionFn,
       ),
-      requestingBuilder: (_) => RequestingPermissionWidget(),
-      grantedBuilder: (_) => GrantedPermissionWidget(),
-      restrictedBuilder: (_, askPermissionFn) => RestrictedPermissionWidget(
-        requestPermissionFn: askPermissionFn,
+      requestingBuilder: _RequestingPermissionWidget(),
+      grantedBuilder: _GrantedPermissionWidget(),
+      restrictedBuilder: (askPermissionFn) => _RestrictedPermissionWidget(
+        requestPermissionFn: () async => await askPermissionFn,
       ),
-      permanentlyDeniedBuilder: (_, askPermissionFn, openSettingsFn) => PermanentlyDeniedWidget(
-        requestPermissionFn: askPermissionFn,
+      permanentlyDeniedBuilder: (askPermissionFn, openSettingsFn) =>
+          _PermanentlyDeniedWidget(
+        requestPermissionFn: () async => await askPermissionFn,
         openSettingsFn: openSettingsFn,
       ),
-      deniedBuilder: (_, askPermissionFn, openSettingsFn) => DeniedPermissionWidget(
+      deniedBuilder: (askPermissionFn, openSettingsFn) =>
+          DeniedPermissionWidget(
         openSettingsFn: openSettingsFn,
-        requestPermissionFn: askPermissionFn,
+        requestPermissionFn: () async => askPermissionFn,
       ),
     );
   }
 }
 
+/// Widget to be build when permission is denied
 class DeniedPermissionWidget extends StatelessWidget {
+  /// Widget to be build when permission is denied
+
   const DeniedPermissionWidget({
     Key key,
     @required this.requestPermissionFn,
     @required this.openSettingsFn,
   }) : super(key: key);
 
+  /// Future funtion that requests the for permission. Await this function to request for permission again
   final Function requestPermissionFn;
+
+  /// Opens app settings
   final Future openSettingsFn;
 
   @override
@@ -43,15 +51,15 @@ class DeniedPermissionWidget extends StatelessWidget {
       title: Text('Permission Restricted. Grant permission'),
       subtitle: Text('User denied the app this permission'),
       leading: IconButton(
-        onPressed: requestPermissionFn,
+        onPressed: () async => await requestPermissionFn,
         icon: Icon(Icons.gesture),
       ),
     );
   }
 }
 
-class PermanentlyDeniedWidget extends StatelessWidget {
-  const PermanentlyDeniedWidget({
+class _PermanentlyDeniedWidget extends StatelessWidget {
+  const _PermanentlyDeniedWidget({
     Key key,
     this.requestPermissionFn,
     this.openSettingsFn,
@@ -85,8 +93,8 @@ class PermanentlyDeniedWidget extends StatelessWidget {
   }
 }
 
-class RestrictedPermissionWidget extends StatelessWidget {
-  const RestrictedPermissionWidget({
+class _RestrictedPermissionWidget extends StatelessWidget {
+  const _RestrictedPermissionWidget({
     Key key,
     this.requestPermissionFn,
   }) : super(key: key);
@@ -107,8 +115,8 @@ class RestrictedPermissionWidget extends StatelessWidget {
   }
 }
 
-class GrantedPermissionWidget extends StatelessWidget {
-  const GrantedPermissionWidget({
+class _GrantedPermissionWidget extends StatelessWidget {
+  const _GrantedPermissionWidget({
     Key key,
   }) : super(key: key);
 
@@ -124,8 +132,8 @@ class GrantedPermissionWidget extends StatelessWidget {
   }
 }
 
-class RequestingPermissionWidget extends StatelessWidget {
-  const RequestingPermissionWidget({
+class _RequestingPermissionWidget extends StatelessWidget {
+  const _RequestingPermissionWidget({
     Key key,
   }) : super(key: key);
 
@@ -139,8 +147,8 @@ class RequestingPermissionWidget extends StatelessWidget {
   }
 }
 
-class FirstTimePermissionWidget extends StatelessWidget {
-  const FirstTimePermissionWidget({
+class _FirstTimePermissionWidget extends StatelessWidget {
+  const _FirstTimePermissionWidget({
     Key key,
     @required this.requestPermissionFn,
   }) : super(key: key);

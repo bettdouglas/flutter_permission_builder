@@ -1,12 +1,15 @@
 import 'package:flutter/foundation.dart';
+import 'package:permission_builder/src/permission_service.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:permission_builder/src/permission_states.dart';
 
+/// Service that request for permissions in defaultpermissionprovider
+// final permissionsService = PermissionsService();
+
 ///Handles state of the permissions
 class PermissionProvider<T> with ChangeNotifier {
-
   /// The permission you need to request
-  /// ``` 
+  /// ```
   ///   PermissionBuilder(
   ///          permission: Permission.location,
   ///      ```
@@ -14,39 +17,45 @@ class PermissionProvider<T> with ChangeNotifier {
 
   PermissionState<T> _permissionState = PermissionState.initial();
 
-  /// Exposes the current state of the permission  
+  /// Exposes the current state of the permission
   PermissionState<T> get state => _permissionState;
 
+  /// the service that asks for permission. Not using extension methods
+  /// to get testing
+  PermissionsService permissionsService;
 
   /// Used internally to manage state of the permission.
   /// if lazy is false, it automatically requests permission when created
   /// otherwise waits for request to be made
-  PermissionProvider(this.permission,bool lazy) {
-    if(!lazy) {
-      _init();
+  PermissionProvider(
+    this.permission,
+    this.permissionsService,
+    bool lazy,
+  ) {
+    if (!lazy) {
+      request;
     }
   }
 
-  _init() async {
-    final permissionStatus = await permission.request();
-    if(permissionStatus.isGranted) {
+  Future _init() async {
+    final permissionStatus = await permissionsService.request(permission);
+    if (permissionStatus.isGranted) {
       _permissionState = PermissionState.granted();
-    } else if(permissionStatus.isDenied) {
+    } else if (permissionStatus.isDenied) {
       _permissionState = PermissionState.denied();
-    } else if(permissionStatus.isPermanentlyDenied) {
+    } else if (permissionStatus.isPermanentlyDenied) {
       _permissionState = PermissionState.permanentlyDenied();
-    } else if(permissionStatus.isRestricted) {
+    } else if (permissionStatus.isRestricted) {
       _permissionState = PermissionState.restricted();
-    } else if(permissionStatus.isUndetermined) {
+    } else if (permissionStatus.isUndetermined) {
       _permissionState = PermissionState.initial();
     }
     notifyListeners();
   }
 
   /// Function to requst for permission
-  Function get request => _init;
+  Future get request async => await _init();
 
-  /// Function that opens app settings 
-  Future get openSettings => openAppSettings();
-
+  /// Function that opens app settings
+  Future<bool> get openSettings => openAppSettings();
 }
