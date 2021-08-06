@@ -169,8 +169,8 @@ void main() {
 
 class TestingScaffold extends StatelessWidget {
   const TestingScaffold({
-    Key key,
-    @required this.store,
+    Key? key,
+    required this.store,
   }) : super(key: key);
 
   final CanNotifyStore store;
@@ -214,8 +214,8 @@ class TestingScaffold extends StatelessWidget {
 
 class TestAnimatedSwitcher extends StatelessWidget {
   const TestAnimatedSwitcher({
-    Key key,
-    @required this.store,
+    Key? key,
+    required this.store,
   }) : super(key: key);
 
   final CanNotifyStore store;

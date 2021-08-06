@@ -34,9 +34,9 @@ class DeniedPermissionWidget extends StatelessWidget {
   /// Widget to be build when permission is denied
 
   const DeniedPermissionWidget({
-    Key key,
-    @required this.requestPermissionFn,
-    @required this.openSettingsFn,
+    Key? key,
+    required this.requestPermissionFn,
+    required this.openSettingsFn,
   }) : super(key: key);
 
   /// Future funtion that requests the for permission. Await this function to request for permission again
@@ -60,11 +60,11 @@ class DeniedPermissionWidget extends StatelessWidget {
 
 class _PermanentlyDeniedWidget extends StatelessWidget {
   const _PermanentlyDeniedWidget({
-    Key key,
-    this.requestPermissionFn,
-    this.openSettingsFn,
+    Key? key,
+    required this.requestPermissionFn,
+    required this.openSettingsFn,
   }) : super(key: key);
-  final Function requestPermissionFn;
+  final VoidCallback requestPermissionFn;
   final Future openSettingsFn;
 
   @override
@@ -95,11 +95,11 @@ class _PermanentlyDeniedWidget extends StatelessWidget {
 
 class _RestrictedPermissionWidget extends StatelessWidget {
   const _RestrictedPermissionWidget({
-    Key key,
-    this.requestPermissionFn,
+    Key? key,
+    required this.requestPermissionFn,
   }) : super(key: key);
 
-  final Function requestPermissionFn;
+  final VoidCallback requestPermissionFn;
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +117,7 @@ class _RestrictedPermissionWidget extends StatelessWidget {
 
 class _GrantedPermissionWidget extends StatelessWidget {
   const _GrantedPermissionWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -134,7 +134,7 @@ class _GrantedPermissionWidget extends StatelessWidget {
 
 class _RequestingPermissionWidget extends StatelessWidget {
   const _RequestingPermissionWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -149,11 +149,11 @@ class _RequestingPermissionWidget extends StatelessWidget {
 
 class _FirstTimePermissionWidget extends StatelessWidget {
   const _FirstTimePermissionWidget({
-    Key key,
-    @required this.requestPermissionFn,
+    Key? key,
+    required this.requestPermissionFn,
   }) : super(key: key);
 
-  final Function requestPermissionFn;
+  final VoidCallback requestPermissionFn;
 
   @override
   Widget build(BuildContext context) {
