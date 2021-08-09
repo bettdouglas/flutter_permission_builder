@@ -22,7 +22,7 @@ class PermissionProvider<T> with ChangeNotifier {
 
   /// the service that asks for permission. Not using extension methods
   /// to get testing
-  PermissionsService permissionsService;
+  PermissionService permissionsService;
 
   /// Used internally to manage state of the permission.
   /// if lazy is false, it automatically requests permission when created
@@ -38,6 +38,8 @@ class PermissionProvider<T> with ChangeNotifier {
   }
 
   Future _init() async {
+    _permissionState = PermissionState.requesting();
+    notifyListeners();
     final permissionStatus = await permissionsService.request(permission);
     if (permissionStatus.isGranted) {
       _permissionState = PermissionState.granted();
@@ -47,8 +49,6 @@ class PermissionProvider<T> with ChangeNotifier {
       _permissionState = PermissionState.permanentlyDenied();
     } else if (permissionStatus.isRestricted) {
       _permissionState = PermissionState.restricted();
-    } else if (permissionStatus.isUndetermined) {
-      _permissionState = PermissionState.initial();
     }
     notifyListeners();
   }

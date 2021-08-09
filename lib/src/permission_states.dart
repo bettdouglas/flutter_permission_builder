@@ -3,8 +3,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'permission_states.freezed.dart';
 
 @freezed
+
 /// Models the various states of the permission using freezed union types
-abstract class PermissionState<T> with _$PermissionState<T> {
+class PermissionState<T> with _$PermissionState<T> {
   /// We didn't ask for permission yet.
   const factory PermissionState.initial() = PermissionInitial;
 
@@ -21,5 +22,6 @@ abstract class PermissionState<T> with _$PermissionState<T> {
   const factory PermissionState.restricted() = PermissionRestricted;
 
   /// The user opted to never again see the permission request dialog for this app.
-  const factory PermissionState.permanentlyDenied() = PermissionPermanentlyDenied;
+  const factory PermissionState.permanentlyDenied() =
+      PermissionPermanentlyDenied;
 }

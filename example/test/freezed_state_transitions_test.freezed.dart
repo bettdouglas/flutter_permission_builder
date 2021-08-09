@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'freezed_state_transitions_test.dart';
 
@@ -9,58 +9,61 @@ part of 'freezed_state_transitions_test.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$_CanNotifyTearOff {
   const _$_CanNotifyTearOff();
 
-// ignore: unused_element
   _YesCanNotify yes() {
     return const _YesCanNotify();
   }
 
-// ignore: unused_element
   _CannNotify no() {
     return const _CannNotify();
   }
 
-// ignore: unused_element
   _CannNotifyError error() {
     return const _CannNotifyError();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const _$CanNotify = _$_CanNotifyTearOff();
 
 /// @nodoc
 mixin _$_CanNotify {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult yes(),
-    @required TResult no(),
-    @required TResult error(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() yes,
+    required TResult Function() no,
+    required TResult Function() error,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult yes(),
-    TResult no(),
-    TResult error(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? yes,
+    TResult Function()? no,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult yes(_YesCanNotify value),
-    @required TResult no(_CannNotify value),
-    @required TResult error(_CannNotifyError value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_YesCanNotify value) yes,
+    required TResult Function(_CannNotify value) no,
+    required TResult Function(_CannNotifyError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult yes(_YesCanNotify value),
-    TResult no(_CannNotify value),
-    TResult error(_CannNotifyError value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_YesCanNotify value)? yes,
+    TResult Function(_CannNotify value)? no,
+    TResult Function(_CannNotifyError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -98,6 +101,7 @@ class __$YesCanNotifyCopyWithImpl<$Res> extends __$CanNotifyCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_YesCanNotify with DiagnosticableTreeMixin implements _YesCanNotify {
   const _$_YesCanNotify();
 
@@ -122,26 +126,22 @@ class _$_YesCanNotify with DiagnosticableTreeMixin implements _YesCanNotify {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult yes(),
-    @required TResult no(),
-    @required TResult error(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() yes,
+    required TResult Function() no,
+    required TResult Function() error,
   }) {
-    assert(yes != null);
-    assert(no != null);
-    assert(error != null);
     return yes();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult yes(),
-    TResult no(),
-    TResult error(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? yes,
+    TResult Function()? no,
+    TResult Function()? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (yes != null) {
       return yes();
     }
@@ -150,26 +150,22 @@ class _$_YesCanNotify with DiagnosticableTreeMixin implements _YesCanNotify {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult yes(_YesCanNotify value),
-    @required TResult no(_CannNotify value),
-    @required TResult error(_CannNotifyError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_YesCanNotify value) yes,
+    required TResult Function(_CannNotify value) no,
+    required TResult Function(_CannNotifyError value) error,
   }) {
-    assert(yes != null);
-    assert(no != null);
-    assert(error != null);
     return yes(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult yes(_YesCanNotify value),
-    TResult no(_CannNotify value),
-    TResult error(_CannNotifyError value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_YesCanNotify value)? yes,
+    TResult Function(_CannNotify value)? no,
+    TResult Function(_CannNotifyError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (yes != null) {
       return yes(this);
     }
@@ -200,6 +196,7 @@ class __$CannNotifyCopyWithImpl<$Res> extends __$CanNotifyCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_CannNotify with DiagnosticableTreeMixin implements _CannNotify {
   const _$_CannNotify();
 
@@ -224,26 +221,22 @@ class _$_CannNotify with DiagnosticableTreeMixin implements _CannNotify {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult yes(),
-    @required TResult no(),
-    @required TResult error(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() yes,
+    required TResult Function() no,
+    required TResult Function() error,
   }) {
-    assert(yes != null);
-    assert(no != null);
-    assert(error != null);
     return no();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult yes(),
-    TResult no(),
-    TResult error(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? yes,
+    TResult Function()? no,
+    TResult Function()? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (no != null) {
       return no();
     }
@@ -252,26 +245,22 @@ class _$_CannNotify with DiagnosticableTreeMixin implements _CannNotify {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult yes(_YesCanNotify value),
-    @required TResult no(_CannNotify value),
-    @required TResult error(_CannNotifyError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_YesCanNotify value) yes,
+    required TResult Function(_CannNotify value) no,
+    required TResult Function(_CannNotifyError value) error,
   }) {
-    assert(yes != null);
-    assert(no != null);
-    assert(error != null);
     return no(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult yes(_YesCanNotify value),
-    TResult no(_CannNotify value),
-    TResult error(_CannNotifyError value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_YesCanNotify value)? yes,
+    TResult Function(_CannNotify value)? no,
+    TResult Function(_CannNotifyError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (no != null) {
       return no(this);
     }
@@ -303,6 +292,7 @@ class __$CannNotifyErrorCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_CannNotifyError
     with DiagnosticableTreeMixin
     implements _CannNotifyError {
@@ -329,26 +319,22 @@ class _$_CannNotifyError
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult yes(),
-    @required TResult no(),
-    @required TResult error(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() yes,
+    required TResult Function() no,
+    required TResult Function() error,
   }) {
-    assert(yes != null);
-    assert(no != null);
-    assert(error != null);
     return error();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult yes(),
-    TResult no(),
-    TResult error(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? yes,
+    TResult Function()? no,
+    TResult Function()? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error();
     }
@@ -357,26 +343,22 @@ class _$_CannNotifyError
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult yes(_YesCanNotify value),
-    @required TResult no(_CannNotify value),
-    @required TResult error(_CannNotifyError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_YesCanNotify value) yes,
+    required TResult Function(_CannNotify value) no,
+    required TResult Function(_CannNotifyError value) error,
   }) {
-    assert(yes != null);
-    assert(no != null);
-    assert(error != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult yes(_YesCanNotify value),
-    TResult no(_CannNotify value),
-    TResult error(_CannNotifyError value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_YesCanNotify value)? yes,
+    TResult Function(_CannNotify value)? no,
+    TResult Function(_CannNotifyError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }

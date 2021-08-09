@@ -4,23 +4,23 @@ version: 0.0.2
 homepage: https://github.com/bettdouglas/flutter_permission_builder
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  freezed_annotation: ^0.12.0
-  permission_handler: ^5.0.1+1
-  provider: ^4.3.2+2
-  freezed: ^0.12.3
+  freezed_annotation:
+  permission_handler: ^8.1.4+2
+  provider: ^5.0.0
+
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^1.10.7
+  build_runner:
   mockito:
+  freezed:
 
-
-flutter:
+dependency_overrides:
+  meta: ^1.7.0

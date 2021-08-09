@@ -1,10 +1,8 @@
 import 'package:permission_handler/permission_handler.dart';
-import 'package:permission_handler/permission_handler.dart' as permissionHandler
-    show openAppSettings;
 
 /// Service to handle requesting of permissions.
 /// Using extension methods disables testing
-class PermissionsService {
+class PermissionService {
   /// Check the status of a specific [Permission]
   Future<PermissionStatus> status(Permission permission) {
     return permission.status;
@@ -12,7 +10,7 @@ class PermissionsService {
 
   /// Open the app settings.
   Future<bool> openAppSettings() {
-    return permissionHandler.openAppSettings();
+    return openAppSettings();
   }
 
   /// Request permissions for a single permission.

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:permission_builder/src/permission_service.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:permission_builder/src/permission_states.dart';
 import 'package:permission_builder/src/permission_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -41,7 +40,8 @@ class PermissionBuilder extends StatelessWidget {
   /// Which permission to request. e.g location, calenda, camera
   final Permission permission;
 
-  PermissionsService _permissionsService;
+  /// handler to request permissions
+  late PermissionService _permissionsService;
 
   /// set to true to wait until user is prompted to grant permission
   /// set to false to immediately request for permission when widget is built
@@ -68,18 +68,18 @@ class PermissionBuilder extends StatelessWidget {
 
   /// Implement the builders here and specify the permission to be requested
   PermissionBuilder({
-    Key key,
-    @required this.permission,
+    Key? key,
+    required this.permission,
     this.lazy = false,
-    @required this.initialBuilder,
-    @required this.requestingBuilder,
-    @required this.grantedBuilder,
-    @required this.restrictedBuilder,
-    @required this.permanentlyDeniedBuilder,
-    @required this.deniedBuilder,
-    PermissionsService permissionsService,
+    required this.initialBuilder,
+    required this.requestingBuilder,
+    required this.grantedBuilder,
+    required this.restrictedBuilder,
+    required this.permanentlyDeniedBuilder,
+    required this.deniedBuilder,
+    PermissionService? permissionService,
   }) : super(key: key) {
-    _permissionsService = permissionsService;
+    _permissionsService = permissionService ?? PermissionService();
   }
 
   @override
@@ -89,7 +89,7 @@ class PermissionBuilder extends StatelessWidget {
       child: ChangeNotifierProvider<PermissionProvider>(
         create: (context) => PermissionProvider(
           permission,
-          _permissionsService ?? PermissionsService(),
+          _permissionsService,
           lazy,
         ),
         builder: (context, _) {

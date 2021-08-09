@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'permission_states.dart';
 
@@ -9,93 +9,93 @@ part of 'permission_states.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$PermissionStateTearOff {
   const _$PermissionStateTearOff();
 
-// ignore: unused_element
   PermissionInitial<T> initial<T>() {
     return PermissionInitial<T>();
   }
 
-// ignore: unused_element
   PermissionRequesting<T> requesting<T>() {
     return PermissionRequesting<T>();
   }
 
-// ignore: unused_element
   PermissionGranted<T> granted<T>() {
     return PermissionGranted<T>();
   }
 
-// ignore: unused_element
   PermissionDenied<T> denied<T>() {
     return PermissionDenied<T>();
   }
 
-// ignore: unused_element
   PermissionRestricted<T> restricted<T>() {
     return PermissionRestricted<T>();
   }
 
-// ignore: unused_element
   PermissionPermanentlyDenied<T> permanentlyDenied<T>() {
     return PermissionPermanentlyDenied<T>();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PermissionState = _$PermissionStateTearOff();
 
 /// @nodoc
 mixin _$PermissionState<T> {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PermissionStateCopyWith<T, $Res> {
   factory $PermissionStateCopyWith(
-    PermissionState<T> value,
-    $Res Function(PermissionState<T>) then,
-  ) = _$PermissionStateCopyWithImpl<T, $Res>;
+          PermissionState<T> value, $Res Function(PermissionState<T>) then) =
+      _$PermissionStateCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
@@ -128,6 +128,7 @@ class _$PermissionInitialCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$PermissionInitial<T> implements PermissionInitial<T> {
   const _$PermissionInitial();
 
@@ -146,35 +147,28 @@ class _$PermissionInitial<T> implements PermissionInitial<T> {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -183,35 +177,29 @@ class _$PermissionInitial<T> implements PermissionInitial<T> {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -243,6 +231,7 @@ class _$PermissionRequestingCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$PermissionRequesting<T> implements PermissionRequesting<T> {
   const _$PermissionRequesting();
 
@@ -261,35 +250,28 @@ class _$PermissionRequesting<T> implements PermissionRequesting<T> {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return requesting();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (requesting != null) {
       return requesting();
     }
@@ -298,35 +280,29 @@ class _$PermissionRequesting<T> implements PermissionRequesting<T> {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return requesting(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (requesting != null) {
       return requesting(this);
     }
@@ -358,6 +334,7 @@ class _$PermissionGrantedCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$PermissionGranted<T> implements PermissionGranted<T> {
   const _$PermissionGranted();
 
@@ -376,35 +353,28 @@ class _$PermissionGranted<T> implements PermissionGranted<T> {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return granted();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (granted != null) {
       return granted();
     }
@@ -413,35 +383,29 @@ class _$PermissionGranted<T> implements PermissionGranted<T> {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return granted(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (granted != null) {
       return granted(this);
     }
@@ -473,6 +437,7 @@ class _$PermissionDeniedCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$PermissionDenied<T> implements PermissionDenied<T> {
   const _$PermissionDenied();
 
@@ -491,35 +456,28 @@ class _$PermissionDenied<T> implements PermissionDenied<T> {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return denied();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (denied != null) {
       return denied();
     }
@@ -528,35 +486,29 @@ class _$PermissionDenied<T> implements PermissionDenied<T> {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return denied(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (denied != null) {
       return denied(this);
     }
@@ -588,6 +540,7 @@ class _$PermissionRestrictedCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$PermissionRestricted<T> implements PermissionRestricted<T> {
   const _$PermissionRestricted();
 
@@ -606,35 +559,28 @@ class _$PermissionRestricted<T> implements PermissionRestricted<T> {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return restricted();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (restricted != null) {
       return restricted();
     }
@@ -643,35 +589,29 @@ class _$PermissionRestricted<T> implements PermissionRestricted<T> {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return restricted(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (restricted != null) {
       return restricted(this);
     }
@@ -706,6 +646,7 @@ class _$PermissionPermanentlyDeniedCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$PermissionPermanentlyDenied<T>
     implements PermissionPermanentlyDenied<T> {
   const _$PermissionPermanentlyDenied();
@@ -725,35 +666,28 @@ class _$PermissionPermanentlyDenied<T>
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult requesting(),
-    @required TResult granted(),
-    @required TResult denied(),
-    @required TResult restricted(),
-    @required TResult permanentlyDenied(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() requesting,
+    required TResult Function() granted,
+    required TResult Function() denied,
+    required TResult Function() restricted,
+    required TResult Function() permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return permanentlyDenied();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult requesting(),
-    TResult granted(),
-    TResult denied(),
-    TResult restricted(),
-    TResult permanentlyDenied(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? requesting,
+    TResult Function()? granted,
+    TResult Function()? denied,
+    TResult Function()? restricted,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (permanentlyDenied != null) {
       return permanentlyDenied();
     }
@@ -762,35 +696,29 @@ class _$PermissionPermanentlyDenied<T>
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(PermissionInitial<T> value),
-    @required TResult requesting(PermissionRequesting<T> value),
-    @required TResult granted(PermissionGranted<T> value),
-    @required TResult denied(PermissionDenied<T> value),
-    @required TResult restricted(PermissionRestricted<T> value),
-    @required TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PermissionInitial<T> value) initial,
+    required TResult Function(PermissionRequesting<T> value) requesting,
+    required TResult Function(PermissionGranted<T> value) granted,
+    required TResult Function(PermissionDenied<T> value) denied,
+    required TResult Function(PermissionRestricted<T> value) restricted,
+    required TResult Function(PermissionPermanentlyDenied<T> value)
+        permanentlyDenied,
   }) {
-    assert(initial != null);
-    assert(requesting != null);
-    assert(granted != null);
-    assert(denied != null);
-    assert(restricted != null);
-    assert(permanentlyDenied != null);
     return permanentlyDenied(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(PermissionInitial<T> value),
-    TResult requesting(PermissionRequesting<T> value),
-    TResult granted(PermissionGranted<T> value),
-    TResult denied(PermissionDenied<T> value),
-    TResult restricted(PermissionRestricted<T> value),
-    TResult permanentlyDenied(PermissionPermanentlyDenied<T> value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PermissionInitial<T> value)? initial,
+    TResult Function(PermissionRequesting<T> value)? requesting,
+    TResult Function(PermissionGranted<T> value)? granted,
+    TResult Function(PermissionDenied<T> value)? denied,
+    TResult Function(PermissionRestricted<T> value)? restricted,
+    TResult Function(PermissionPermanentlyDenied<T> value)? permanentlyDenied,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (permanentlyDenied != null) {
       return permanentlyDenied(this);
     }

@@ -12,9 +12,8 @@ final denied = PermissionStatus.denied;
 final granted = PermissionStatus.granted;
 final permanentlyDenied = PermissionStatus.permanentlyDenied;
 final restricted = PermissionStatus.restricted;
-final undetermined = PermissionStatus.undetermined;
 
-@GenerateMocks([PermissionsService])
+@GenerateMocks([PermissionService])
 void main() {
   group('Mocked Permission class should mock', () {
     test('should return mocked permission status', () async {
@@ -32,7 +31,7 @@ void main() {
   });
 
   group('PermissionProvider', () {
-    test('should not start when lazy is false', () async {
+    test('should not start when lazy is true', () async {
       final mock = mockAs(denied);
       final rand = randomPermission;
       when(mock.request(rand)).thenAnswer(
@@ -41,7 +40,7 @@ void main() {
       final prov = PermissionProvider(
         rand,
         mock,
-        false,
+        true,
       );
       // await Duration(milliseconds: 500);
       expect(prov.state, isA<PermissionInitial>());
@@ -97,37 +96,20 @@ void main() {
         'a',
       );
     });
-
-    test('should map undetermined to initial', () async {
-      final mock = mockAs(undetermined);
-      final rand = randomPermission;
-      when(mock.request(rand)).thenAnswer(
-        (_) async => undetermined,
-      );
-      final prov = providerWithMock(mock, rand);
-      await prov.request;
-      expect(
-        prov.state.maybeWhen(
-          orElse: () => throw Error(),
-          initial: () => 'a',
-        ),
-        'a',
-      );
-    });
   });
 
   test('should update when status is changed', () async {
-    final mock = mockAs(undetermined);
+    final mock = mockAs(denied);
     final rand = randomPermission;
     when(mock.request(rand)).thenAnswer(
-      (_) async => undetermined,
+      (_) async => denied,
     );
     final prov = providerWithMock(mock, rand);
     await prov.request;
     expect(
       prov.state.maybeWhen(
         orElse: () => throw Error(),
-        initial: () => 'a',
+        denied: () => 'a',
       ),
       'a',
     );
@@ -173,7 +155,7 @@ void main() {
     final permission = randomPermission;
     final provWithMock = providerWithMock(mock, permission);
     when(provWithMock.request).thenAnswer(
-      (realInvocation) => null,
+      (realInvocation) async => permanentlyDenied,
     );
     await provWithMock.request;
     verify(provWithMock.request).called(1);
@@ -184,7 +166,7 @@ void main() {
     final permission = randomPermission;
     final provWithMock = providerWithMock(mock, permission);
     when(provWithMock.request).thenAnswer(
-      (realInvocation) => null,
+      (realInvocation) async => permanentlyDenied,
     );
     await provWithMock.request;
     verify(provWithMock.request).called(1);
