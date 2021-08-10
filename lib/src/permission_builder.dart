@@ -84,17 +84,18 @@ class PermissionBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      key: Key(permission.value.toString()),
-      child: ChangeNotifierProvider<PermissionProvider>(
-        create: (context) => PermissionProvider(
-          permission,
-          _permissionsService,
-          lazy,
-        ),
-        builder: (context, _) {
-          final provider = context.watch<PermissionProvider>();
-          return provider.state.map(
+    return ChangeNotifierProvider<PermissionProvider>(
+      create: (context) => PermissionProvider(
+        permission,
+        _permissionsService,
+        lazy,
+      ),
+      lazy: lazy,
+      builder: (context, _) {
+        final provider = context.watch<PermissionProvider>();
+        return KeyedSubtree(
+          key: ValueKey(provider.state),
+          child: provider.state.map(
             initial: (_) => initialBuilder(
               provider.request,
             ),
@@ -111,9 +112,9 @@ class PermissionBuilder extends StatelessWidget {
               provider.request,
               provider.openSettings,
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

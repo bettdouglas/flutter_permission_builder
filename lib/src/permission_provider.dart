@@ -33,7 +33,7 @@ class PermissionProvider<T> with ChangeNotifier {
     bool lazy,
   ) {
     if (!lazy) {
-      request;
+      _init();
     }
   }
 

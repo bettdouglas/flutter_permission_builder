@@ -1,6 +1,6 @@
 name: permission_builder
 description: A package thats a wraps around [permission_handler](https://pub.dev/packages/permission_handler) to help you handle your permissions more elegantly.
-version: 0.0.2
+version: 0.1.0
 homepage: https://github.com/bettdouglas/flutter_permission_builder
 
 environment:
@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  freezed_annotation:
+  freezed_annotation: ^0.14.0
   permission_handler: ^8.1.4+2
   provider: ^5.0.0
 
@@ -20,7 +20,4 @@ dev_dependencies:
     sdk: flutter
   build_runner:
   mockito:
-  freezed:
-
-dependency_overrides:
-  meta: ^1.7.0
+  freezed: ^0.14.0

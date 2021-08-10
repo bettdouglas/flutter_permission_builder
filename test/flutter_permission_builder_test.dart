@@ -88,8 +88,8 @@ void main() {
           key: deniedKey,
         ),
       );
-      await tester.pumpWidget(permissionBuilder);
-      await tester.pumpAndSettle(Duration(seconds: 1));
+      // await tester.pumpApp(permissionBuilder);
+      // await tester.pumpAndSettle(Duration(seconds: 1));
       // await tester.pumpAndSettle();
       // expect(find.byKey(initialKey), findsOneWidget);
       // expect(find.byKey(deniedKey), findsNothing);
